@@ -40,17 +40,16 @@ https://anushkaguptacg-a11y.github.io/pageturner/
 ## 📸 Screenshots
 
 ### Homepage
+![Homepage](screenshots/home.png)
 
-![Homepage](screenshots/homepage.png)
+### Featured Books
+![Featured Books](screenshots/featured.png)
 
 ### Book Details
-
-![Book Details](screenshots/book-details.png)
+![Book Details](screenshots/details.png)
 
 ### Checkout
-
 ![Checkout](screenshots/checkout.png)
-
 ## 🔮 Future Improvements
 
 - User authentication
