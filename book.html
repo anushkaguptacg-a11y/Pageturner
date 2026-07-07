@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Midnight Library - PageTurner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <div>
+          <span>PageTurner</span>
+          <span class="subtext">Books, stories, you.</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="thrifted.html?type=indie">Indie Books</a></li>
+        <li><a href="thrifted.html?type=thrifted">Thrifted Books</a></li>
+        <li><a href="thrifted.html">About Us</a></li>
+        <li><a href="checkout.html">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search books, authors..." aria-label="Search books">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+
+        <a href="checkout.html" class="icon-btn" id="cart-button" title="View Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+
+        <a href="#" class="icon-btn" title="User Profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Details Content -->
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <a href="thrifted.html">Indie Books</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <span id="breadcrumb-book-title">The Midnight Library</span>
+    </div>
+
+    <!-- Product Layout Grid -->
+    <div class="product-detail-grid">
+      <!-- Left Column: Gallery -->
+      <div class="product-gallery">
+        <div class="main-image-wrapper">
+          <img id="detail-main-img" src="assets/book_midnight_library.png" alt="The Midnight Library Cover">
+          <button class="favorite-detail-btn" id="detail-fav-btn" title="Add to Wishlist">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="product-gallery-thumbs">
+          <div class="thumb-wrapper active">
+            <img src="assets/book_midnight_library.png" alt="Thumbnail 1" onerror="handleImageError(this, 'The Midnight Library', 'Matt Haig')">
+          </div>
+          <div class="thumb-wrapper">
+            <img src="assets/hero_books.png" alt="Thumbnail 2" onerror="this.src='assets/hero_books.png'">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Product Info -->
+      <div class="product-info-col">
+        <div class="badge-tag" style="background-color: var(--color-accent-green-bg); color: var(--color-accent-green-text); padding: 4px 10px; border-radius: var(--border-radius-sm);">
+          EDITOR'S PICK
+        </div>
+
+        <h1 class="product-title" id="detail-title">The Midnight Library</h1>
+        <span class="product-author" id="detail-author">by Matt Haig</span>
+
+        <div class="rating-container">
+          <div class="stars">
+            <!-- 5 Stars SVG -->
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <span id="detail-rating-text">4.5 (1,280 Reviews)</span>
+        </div>
+
+        <div class="product-description">
+          <p id="desc-text">Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices... Would you have done anything different, if you had the chance to undo your regrets?</p>
+          <div class="read-more-link" onclick="const p = document.getElementById('desc-text'); p.textContent += ' Shelved in the library of regrets are all the paths you did not take. But what if one of those other lives was truly better? In this heart-wrenching novel, Matt Haig explores the choices that make life worth living, weaving a beautiful fantasy about second chances.'; this.style.display='none';">
+            Read more description
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </div>
+
+        <!-- Buy options section -->
+        <div class="purchase-options">
+          <!-- Option New Copy -->
+          <div class="purchase-card new-card active" id="new-purchase-card">
+            <div class="purchase-info-left">
+              <span class="purchase-label-badge">NEW COPY</span>
+              <div class="purchase-price-tag">
+                <span class="purchase-price" id="new-card-price">₹499</span>
+              </div>
+              <div class="purchase-details">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hardcover, First Edition</span>
+              </div>
+            </div>
+            <!-- Interactive Action Button directly in Card -->
+            <button class="btn btn-primary" id="new-copy-add-btn">
+              Add New to Cart
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </button>
+          </div>
+
+          <!-- Option Thrifted Copy -->
+          <div class="purchase-card thrifted-card" id="thrifted-purchase-card">
+            <div class="purchase-info-left">
+              <span class="purchase-label-badge">THRIFTED</span>
+              <div class="purchase-price-tag">
+                <span class="purchase-price" id="thrifted-card-price">₹399</span>
+              </div>
+              <div class="purchase-details">
+                <!-- Recycle SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="17 1 21 5 17 9"></polyline>
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                  <polyline points="7 23 3 19 7 15"></polyline>
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                </svg>
+                <span>Good Condition, Paperback</span>
+              </div>
+            </div>
+            <button class="btn btn-secondary" id="thrifted-copy-add-btn" style="border-color: var(--color-accent-brown-text); color: var(--color-accent-brown-text);">
+              Add Thrifted to Cart
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Master Add Button (Fallback) -->
+        <button class="btn btn-primary" id="add-to-cart-action-btn" style="display: none; padding: 16px;">
+          Add New to Cart
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px;">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </button>
+
+        <!-- Delivery trust items -->
+        <div class="trust-badges-bar">
+          <div class="trust-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+            <span>Free delivery over ₹999</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Eco-friendly packaging</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+            <span>7-day easy returns</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About The Author -->
+    <section class="about-author-section">
+      <h3 class="author-header wavy-accent brown">About the Author</h3>
+      <div class="author-layout">
+        <div class="author-photo-wrapper">
+          <img src="assets/author_matt.png" alt="Matt Haig portrait" onerror="this.src='assets/author_matt.png'">
+        </div>
+        <div class="author-bio-col">
+          <span class="author-bio-name">Matt Haig</span>
+          <p class="author-bio-text">
+            Matt Haig is the internationally bestselling author of the memoir Reasons to Stay Alive, along with six highly acclaimed novels, including How to Stop Time and The Midnight Library. His work has been translated into over forty languages and has sold millions of copies worldwide. He lives in Brighton with his family and is a vocal advocate for mental health awareness.
+          </p>
+          <div class="author-actions">
+            <a href="thrifted.html?search=Matt+Haig" class="btn btn-secondary btn-arrow">
+              View all books
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <button class="btn btn-outline-dark" onclick="alert('You are now following Matt Haig! 🔔')">Follow Author</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reader Reviews -->
+    <section class="reviews-section">
+      <div class="reviews-header-row">
+        <div class="reviews-title-block">
+          <h3>
+            Reader Reviews
+            <!-- Sparkles SVG -->
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="color: #F59E0B; margin-left: 4px;">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </h3>
+          <p>Join the conversation with our community of 1,200+ readers.</p>
+        </div>
+        <button class="btn btn-primary" onclick="alert('Review system is in sandbox mode!')">Write a Review</button>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-top-row">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span class="review-date">Oct 12, 2023</span>
+          </div>
+          <p class="review-text">
+            "A life-changing read. This book found me exactly when I needed it. The concept of the library is so beautifully realized."
+          </p>
+          <div class="review-user-row">
+            <div class="user-avatar-circle">AS</div>
+            <span class="user-name-text">Ananya S.</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-top-row">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span class="review-date">Nov 5, 2023</span>
+          </div>
+          <p class="review-text">
+            "I bought the thrifted version and it was in excellent condition. The story itself is thought-provoking and stays with you."
+          </p>
+          <div class="review-user-row">
+            <div class="user-avatar-circle">RK</div>
+            <span class="user-name-text">Rahul K.</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-top-row">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span class="review-date">Dec 20, 2023</span>
+          </div>
+          <p class="review-text">
+            "Simply magical. If you've ever felt like your life is full of 'what ifs', this is the book for you. Fast shipping from PageTurner too!"
+          </p>
+          <div class="review-user-row">
+            <div class="user-avatar-circle">SM</div>
+            <span class="user-name-text">Sarah M.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="footer-logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          PageTurner
+        </a>
+        <p>Curated books for curious readers. From indie debuts to pre-loved classics, we help stories find their next home.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="thrifted.html">About Us</a></li>
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="contact-info-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>hello@pageturnerbooks.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Bangalore, India</span>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>Get updates on new arrivals, offers & more.</p>
+        <div class="promo-box" style="margin-top: 10px;">
+          <input type="email" placeholder="Your email" style="border-radius: var(--border-radius-sm); border: 1px solid rgba(28,25,23,0.1); padding: 8px 12px; width: 100%;">
+          <button class="btn btn-primary" onclick="alert('Subscribed!')" style="border-radius: var(--border-radius-sm); padding: 8px 16px;">Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 PageTurner. All rights reserved. Made with ❤️</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js?v=2"></script>
+</body>
+</html>

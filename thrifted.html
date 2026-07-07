@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thrifted Treasures - PageTurner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <div>
+          <span>PageTurner</span>
+          <span class="subtext">Books, stories, you.</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="thrifted.html?type=indie">Indie Books</a></li>
+        <li><a href="thrifted.html?type=thrifted">Thrifted Books</a></li>
+        <li><a href="thrifted.html">About Us</a></li>
+        <li><a href="checkout.html">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search books, authors..." aria-label="Search books">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+
+        <a href="checkout.html" class="icon-btn" id="cart-button" title="View Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+
+        <a href="#" class="icon-btn" title="User Profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Listing Content Area -->
+  <main class="container" style="padding-top: 40px;">
+    <!-- Listing Header Banner -->
+    <div class="listing-header-banner">
+      <h1 class="wavy-accent brown">Thrifted Treasures</h1>
+      <p style="margin-top: 12px;">Pre-loved stories waiting for their next chapter. Each book is inspected for quality and priced for discovery.</p>
+    </div>
+
+    <!-- Main Listing Layout -->
+    <div class="listing-layout">
+      <!-- Sidebar Filters -->
+      <aside class="filters-sidebar">
+        <!-- Categories Filter -->
+        <div class="filter-group">
+          <h3 class="filter-title">Categories</h3>
+          <div class="filter-options-list">
+            <label class="checkbox-label">
+              <input type="checkbox" value="Fiction" class="category-filter">
+              Fiction
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" value="Non-Fiction" class="category-filter">
+              Non-Fiction
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" value="Mystery & Thriller" class="category-filter" checked>
+              Mystery & Thriller
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" value="Academic" class="category-filter">
+              Academic
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" value="Poetry" class="category-filter">
+              Poetry
+            </label>
+          </div>
+        </div>
+
+        <!-- Condition Filter -->
+        <div class="filter-group">
+          <h3 class="filter-title">Condition</h3>
+          <div class="filter-options-list">
+            <label class="radio-label">
+              <input type="radio" name="condition" value="All Thrifted" class="condition-filter" checked>
+              All Thrifted
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="condition" value="Like New" class="condition-filter">
+              Like New
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="condition" value="Good" class="condition-filter">
+              Good (Mild Wear)
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="condition" value="Acceptable" class="condition-filter">
+              Acceptable
+            </label>
+          </div>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="filter-group">
+          <h3 class="filter-title">Price Range</h3>
+          <div class="price-slider-container">
+            <div class="price-slider-labels">
+              <span>₹0</span>
+              <span>₹1000+</span>
+            </div>
+            <input type="range" id="price-slider" class="price-slider-input" min="0" max="1000" value="800">
+            <span class="price-slider-value" id="price-value">₹800</span>
+          </div>
+        </div>
+
+        <!-- Rating Filter -->
+        <div class="filter-group">
+          <h3 class="filter-title">Rating</h3>
+          <div class="filter-options-list">
+            <label class="radio-label">
+              <input type="radio" name="rating-filter" checked>
+              All Ratings
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="rating-filter">
+              4.5 & up
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="rating-filter">
+              4.0 & up
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Book Grid & Controls -->
+      <section>
+        <!-- Controls row -->
+        <div class="results-header-row">
+          <span class="results-count" id="results-count">Showing 24 results for Thrifted Books</span>
+          <div class="sort-select-wrapper">
+            <span>Sort by:</span>
+            <select class="sort-select" id="sort-select">
+              <option value="bestseller">Best Selling</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Book Card Grid -->
+        <div class="book-grid" id="listing-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
+          <!-- Populated dynamically via script.js -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <span class="page-num active">1</span>
+          <span class="page-num">2</span>
+          <span class="page-num">3</span>
+          <span class="page-num">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="footer-logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          PageTurner
+        </a>
+        <p>Curated books for curious readers. From indie debuts to pre-loved classics, we help stories find their next home.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="contact-info-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>hello@pageturnerbooks.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 98765 43210</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>14 Reading Lane, Bangalore, India</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="thrifted.html">About Us</a></li>
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Let's Connect</h3>
+        <p>We'd love to hear from you!</p>
+        <a href="checkout.html" class="btn btn-outline-dark btn-arrow" style="align-self: flex-start;">
+          Contact Us
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 PageTurner. All rights reserved. Made with ❤️ and coffee.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js?v=2"></script>
+</body>
+</html>

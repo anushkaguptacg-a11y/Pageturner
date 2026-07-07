@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed! - PageTurner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <div>
+          <span>PageTurner</span>
+          <span class="subtext">Books, stories, you.</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="thrifted.html?type=indie">Indie Books</a></li>
+        <li><a href="thrifted.html?type=thrifted">Thrifted Books</a></li>
+        <li><a href="thrifted.html">About Us</a></li>
+        <li><a href="checkout.html">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="checkout.html" class="icon-btn" id="cart-button" title="View Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+
+        <a href="#" class="icon-btn" title="User Profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Success Page Main Content -->
+  <main class="container">
+    <div class="success-card">
+      <div class="success-icon-wrapper">
+        <!-- Checkmark SVG -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1 class="wavy-accent red">Order Confirmed!</h1>
+      <p>Thank you for your order! We are preparing your books for their new home. A confirmation email has been sent to <strong>hello@aditi.com</strong>.</p>
+      
+      <span style="font-size: 12px; color: var(--color-text-muted); font-weight: 700; text-transform: uppercase; margin-top: 8px;">Your Order Number</span>
+      <div class="order-number-box" id="success-order-number">
+        PT-108392
+      </div>
+      
+      <p id="success-order-total" style="font-weight: 700; color: var(--color-primary); font-size: 15px; margin-top: -4px;">Order Total: ₹812.00</p>
+
+      <div class="success-actions">
+        <a href="thrifted.html" class="btn btn-primary">Continue Shopping</a>
+        <a href="index.html" class="btn btn-secondary">Go Home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-bottom" style="border-top: none; padding-top: 0;">
+      <p>© 2024 PageTurner. All rights reserved. Packaged with care and love.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js?v=2"></script>
+</body>
+</html>

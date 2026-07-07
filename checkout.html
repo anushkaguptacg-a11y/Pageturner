@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete your order - PageTurner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <div>
+          <span>PageTurner</span>
+          <span class="subtext">Books, stories, you.</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="thrifted.html?type=indie">Indie Books</a></li>
+        <li><a href="thrifted.html?type=thrifted">Thrifted Books</a></li>
+        <li><a href="thrifted.html">About Us</a></li>
+        <li><a href="checkout.html" class="active">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search books, authors..." aria-label="Search books">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+
+        <a href="checkout.html" class="icon-btn" id="cart-button" title="View Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+
+        <a href="#" class="icon-btn" title="User Profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Checkout Main Area -->
+  <main class="container" style="padding-top: 40px;">
+    <!-- Main checkout Layout -->
+    <div class="checkout-layout">
+      <!-- Left Column: Order details -->
+      <div class="checkout-main-col">
+        <div class="checkout-header-block">
+          <h1 class="wavy-accent red">Complete your order.</h1>
+          <p>You're just one step away from welcoming new stories into your home. Each book is packed with sustainable materials and love.</p>
+        </div>
+
+        <!-- Selections Card -->
+        <div class="checkout-card-section">
+          <div class="checkout-section-header">
+            <h2 class="checkout-section-title">Your Selections</h2>
+            <a href="thrifted.html" class="edit-link">Edit Cart</a>
+          </div>
+          <!-- Cart Items List (Dynamic) -->
+          <div class="cart-items-list" id="checkout-items-list">
+            <!-- Loaded dynamically via script.js -->
+          </div>
+        </div>
+
+        <!-- Promo Code section -->
+        <div class="checkout-card-section">
+          <div class="checkout-section-header">
+            <h2 class="checkout-section-title">Have a promo code?</h2>
+          </div>
+          <div class="promo-box">
+            <input type="text" id="promo-input" placeholder="Enter code (e.g. COZYREADS)" aria-label="Promo code">
+            <button type="button" class="btn" id="promo-btn">Apply</button>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="checkout-trust-grid">
+          <!-- Card 1 -->
+          <div class="checkout-trust-card green">
+            <div class="checkout-trust-header">
+              <!-- Heart icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              <span>Handpicked with love</span>
+            </div>
+            <p class="checkout-trust-text">Each thrifted gem is inspected for quality. We only sell books we'd keep on our own shelves.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="checkout-trust-card lavender">
+            <div class="checkout-trust-header">
+              <!-- Package icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+              <span>Safe packaging</span>
+            </div>
+            <p class="checkout-trust-text">Plastic-free, book-safe packaging that protects corners and preserves the magic inside.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Sidebar summaries -->
+      <div>
+        <div class="checkout-sidebar-card">
+          <div class="secure-header">
+            <!-- Lock SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>Secure Checkout</span>
+          </div>
+
+          <!-- Shipping Details Block -->
+          <div class="checkout-detail-group">
+            <span class="checkout-detail-title">Shipping Details</span>
+            <div class="checkout-detail-box" id="shipping-details-box">
+              <input type="text" id="shipping-name" placeholder="Full Name" required>
+              <input type="text" id="shipping-address" placeholder="Address" required>
+              <input type="text" id="shipping-city-zip" placeholder="City, State, ZIP" required>
+              <input type="text" id="shipping-phone" placeholder="Phone Number" required>
+            </div>
+          </div>
+
+          <!-- Payment Details Block -->
+          <div class="checkout-detail-group">
+            <span class="checkout-detail-title">Payment Method</span>
+            <div class="checkout-detail-box payment">
+              <!-- Credit card icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+              <span>Visa ending in 4242</span>
+            </div>
+          </div>
+
+          <!-- Price Summaries -->
+          <div class="checkout-summary-list">
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-muted);">Subtotal</span>
+              <span id="checkout-subtotal">₹798.00</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-muted);">Shipping</span>
+              <span style="color: #10B981; font-weight: 600;" id="checkout-shipping">FREE</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-muted);">Estimated Tax</span>
+              <span id="checkout-tax">₹14.00</span>
+            </div>
+            <div class="checkout-summary-row total">
+              <span>Total</span>
+              <span id="checkout-total">₹812.00</span>
+            </div>
+          </div>
+
+          <!-- Place Order Button -->
+          <button type="button" class="btn btn-primary btn-arrow" id="place-order-btn">
+            Place Order
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <!-- Delivery info -->
+          <div class="checkout-sidebar-footer">
+            <div class="eco-badges-mini">
+              <!-- Truck SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <!-- Shield SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <!-- Leaf SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.58-1 9.58A7 7 0 0 1 11 20z"></path></svg>
+            </div>
+            <span class="delivery-date-text">Guaranteed delivery by Friday, Oct 27th</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="footer-logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          PageTurner
+        </a>
+        <p>Curated books for curious readers. From indie gems to pre-loved classics, we help stories find their next home.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="thrifted.html">About Us</a></li>
+          <li><a href="#">Thrifted Books Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Let's Connect</h3>
+        <p>Join our reader community for updates and literary news.</p>
+        <a href="checkout.html" class="btn btn-outline-dark btn-arrow" style="align-self: flex-start; margin-top: 10px;">
+          Contact Us
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 PageTurner. All rights reserved. Made with ✨ and coffee.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js?v=2"></script>
+</body>
+</html>
